@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<article ng-repeat="blog in blogs" >
+<h1><a href="#/blog/{{blogs.indexOf(blog)}}">{{blog.title}}</a></h1>
+<p>{{blog.expert}}</p>
+<a href="#/blog/{{blogs.indexOf(blog)}}">read more &rarr;</a>
+</article>
+</body>
+</html>
