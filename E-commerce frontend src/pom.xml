@@ -19,6 +19,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>4.3.2.RELEASE</version>
+			<exclusions>
+			<exclusion>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			</exclusion>
+			</exclusions>
 		</dependency>
  
 		<dependency>
@@ -144,3 +150,4 @@
   </plugins>
   </build>
 </project>
+
