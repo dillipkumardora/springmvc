@@ -1,5 +1,8 @@
 package com.niit.ecommerce.controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +19,8 @@ import com.niit.ecommerce.model.User;
 
 @Controller
 public class HomeController {
-	
-	
-	
+
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@Autowired
 	UserDAO userDAO;
 
@@ -31,6 +33,8 @@ public class HomeController {
 
 		
 		ModelAndView mv = new ModelAndView("home");
+		logger.info("Inside Page controller index method - INFO");
+		logger.debug("Inside Page controller index method - DEBUG");
 		return mv;
 		
 	}
@@ -98,3 +102,4 @@ public class HomeController {
 
 
 }
+
